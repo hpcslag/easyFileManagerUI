@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FileManage</title>
+	<link rel="stylesheet" id="controlViewOfFileManager" href="/css/fileManagerViewText.css">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+</head>
+<body>
+
+<button onclick="cell()">Change To Cell View</button>
+<button onclick="text()">Change To Text View</button>
+<div id="fileManager">
+	<ul class="files">
+		<li class="isFolder">New Folder 1
+			<ul class="files" style="display:none;">
+				<li class="isFile isImage">File 1.png</li>
+				<li class="isFile isImage">File 1.png</li>
+				<li class="isFile isImage">File 1.png</li>
+			</ul>
+		</li>
+		<li class="isFile isImage">File 1.png</li>
+		<li class="isFile isImage">File 1.png</li>
+		<li class="isFile isImage">File 1.png</li>
+		<li class="isFile isImage">File 1.png</li>
+		<li class="isFile isImage">File 2.jpg</li>
+		<li class="isFile isImage">File 3.jpg</li>
+		<li class="isFile isVideo">File 4.mp4</li>
+		<li class="isFile isVideo">File 5.mp4</li>
+		<li class="isFile isVideo">File 5.mp4</li>
+		<li class="isFile isVideo">File 5.mp4</li>
+		<li class="isFile isVideo">File 5.mp4</li>
+		<li class="isFile isVideo">File 5.mp4</li>
+		<li class="isFile isVideo">File 5.mp4</li>
+		<li class="isFile isVideo">File 5.mp4</li>
+		<li class="isFile isVideo">File 5.mp4</li>
+		<li class="isFile isVideo">File 5.mp4</li>
+	</ul>
+</div>
+<script type="text/javascript">
+
+function text(){
+	changeCSS("/css/fileManagerViewText.css");
+}
+
+function cell(){
+	changeCSS("/css/fileManagerViewCell.css")
+}
+
+
+function changeCSS(cssFile) {
+
+    var oldlink = document.getElementById("controlViewOfFileManager");
+
+    var newlink = document.createElement("link");
+    newlink.setAttribute("rel", "stylesheet");
+    newlink.setAttribute("type", "text/css");
+    newlink.setAttribute("id", "controlViewOfFileManager");
+    newlink.setAttribute("href", cssFile);
+
+    document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+}
+</script>
+</body>
+</html>

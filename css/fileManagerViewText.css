@@ -1,0 +1,58 @@
+#fileManager{
+	width: 50%;
+	height:auto;
+	border:1px #333 solid;
+
+	position: absolute;
+	left: 25%;
+	top: 25%;
+}
+
+.files{
+	list-style: none;
+		padding: 0;
+}
+
+.isFile{
+	padding:3px;
+	padding-left: 2em;
+	list-style: none;
+}
+
+.isFile:before {
+  content: "\f15b"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+}
+
+.isFolder{
+	padding:3px;
+	padding-left: 2em;
+	list-style: none;
+}
+
+.isFolder:before {
+  content: "\f07b"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+}
+
+.isImage:before {
+  content: "\f03e" !important; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+}
+
+.isVideo:before {
+  content: "\f03d" !important; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+}
